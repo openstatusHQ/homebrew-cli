@@ -5,20 +5,20 @@
 class Openstatus < Formula
   desc "OpenStatus CLI"
   homepage "https://www.openstatus.dev"
-  version "0.0.0"
+  version "0.0.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/openstatusHQ/cli/releases/download/v0.0.0/cli_Darwin_x86_64.tar.gz"
-      sha256 "57feda4ee118bab96dc7099437b351ad333099aea5dbc4d4013b20d57d9801f5"
+      url "https://github.com/openstatusHQ/cli/releases/download/v0.0.1/cli_Darwin_x86_64.tar.gz"
+      sha256 "b9e445d09fcbbb7d687bf49912267d22f79541cdc78cec3f97f498ed1003c981"
 
       def install
         bin.install "openstatus"
       end
     end
     on_arm do
-      url "https://github.com/openstatusHQ/cli/releases/download/v0.0.0/cli_Darwin_arm64.tar.gz"
-      sha256 "4361c4b006e7d6c84f45df875b3f04a149bcc3201ad44d7c3c6d0fa6146f0b06"
+      url "https://github.com/openstatusHQ/cli/releases/download/v0.0.1/cli_Darwin_arm64.tar.gz"
+      sha256 "4b1e5fa1121b1e5d18db94ec40c97ccf9ddd805e6e426ab5c1b3237450cc9b2e"
 
       def install
         bin.install "openstatus"
@@ -29,8 +29,8 @@ class Openstatus < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/openstatusHQ/cli/releases/download/v0.0.0/cli_Linux_x86_64.tar.gz"
-        sha256 "d373afbd2db383f72fcfaae61a86146494debadcba3ecc342a7125f01a43596d"
+        url "https://github.com/openstatusHQ/cli/releases/download/v0.0.1/cli_Linux_x86_64.tar.gz"
+        sha256 "f4f7518a1359997a29887d41d7f140985d357b0236dca50cccd123e19499a2ff"
 
         def install
           bin.install "openstatus"
@@ -39,8 +39,8 @@ class Openstatus < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/openstatusHQ/cli/releases/download/v0.0.0/cli_Linux_arm64.tar.gz"
-        sha256 "040f7fbeda4b6b29d6b5bed5c4e3d1c6275319b20e52e30bcf3b9976618ea6f6"
+        url "https://github.com/openstatusHQ/cli/releases/download/v0.0.1/cli_Linux_arm64.tar.gz"
+        sha256 "3d106a46178f5daf916ecb77f00e2ea11e8c4a3df97f949755d67f9b8308a38f"
 
         def install
           bin.install "openstatus"
