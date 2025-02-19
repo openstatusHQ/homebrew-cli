@@ -5,20 +5,20 @@
 class Openstatus < Formula
   desc "OpenStatus CLI"
   homepage "https://www.openstatus.dev"
-  version "0.0.2"
+  version "0.0.3"
 
   on_macos do
-    on_intel do
-      url "https://github.com/openstatusHQ/cli/releases/download/v0.0.2/cli_Darwin_x86_64.tar.gz"
-      sha256 "9b5b2db92368916f8371fbb7d775b833fda3d8bf2a7f3de4d020bf11281af8fc"
+    if Hardware::CPU.intel?
+      url "https://github.com/openstatusHQ/cli/releases/download/v0.0.3/cli_Darwin_x86_64.tar.gz"
+      sha256 "106edf526de3f4c7b328c03fe55edc318b17414a38ac95d3937a220931236e46"
 
       def install
         bin.install "openstatus"
       end
     end
-    on_arm do
-      url "https://github.com/openstatusHQ/cli/releases/download/v0.0.2/cli_Darwin_arm64.tar.gz"
-      sha256 "f13dc28a3abfd73ca9299c8623be683401fb938c0342e0604156ac78d84517ce"
+    if Hardware::CPU.arm?
+      url "https://github.com/openstatusHQ/cli/releases/download/v0.0.3/cli_Darwin_arm64.tar.gz"
+      sha256 "4f01963b631e5cbf246c87d80b80345c669944801ddc2b809453cf8b8c4986e5"
 
       def install
         bin.install "openstatus"
@@ -27,20 +27,20 @@ class Openstatus < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/openstatusHQ/cli/releases/download/v0.0.2/cli_Linux_x86_64.tar.gz"
-        sha256 "4b9dcdd6f0a59b205dc862a67b09154f96b4c0c61919e61214881ea26b4eed22"
+        url "https://github.com/openstatusHQ/cli/releases/download/v0.0.3/cli_Linux_x86_64.tar.gz"
+        sha256 "74a0dddc85789bce37b33e0117738f84f508184f834ff16e44a9f57eeb423268"
 
         def install
           bin.install "openstatus"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/openstatusHQ/cli/releases/download/v0.0.2/cli_Linux_arm64.tar.gz"
-        sha256 "90c568759d092a7f870e6fe0291ebb04d988d3e2990d5ae07598db114e4e28c2"
+        url "https://github.com/openstatusHQ/cli/releases/download/v0.0.3/cli_Linux_arm64.tar.gz"
+        sha256 "7172f86e5228b40c777aaa6ac14b8279667636cbfe5f3df68c8bb036e7b2dd16"
 
         def install
           bin.install "openstatus"
