@@ -10,20 +10,20 @@ class Openstatus < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/openstatusHQ/cli/releases/download/v0.0.4/cli_Darwin_x86_64.tar.gz"
-      sha256 "6288b0c567d9de0868999f629fa9fdad9494e263243bc38996dd2859086de2fd"
+      sha256 "853630337ec7fd4ecb2e68e3037964f9c9f2b6ca244e8a90005bccecd6ea59b9"
 
       def install
         bin.install "openstatus"
-        man1.install "openstatus-docs.1"
+        man1.install "docs/openstatus-docs.1"
       end
     end
     if Hardware::CPU.arm?
       url "https://github.com/openstatusHQ/cli/releases/download/v0.0.4/cli_Darwin_arm64.tar.gz"
-      sha256 "ed17d0054a16e74864682f9bff03d0c7fb3fc33f8c60cd4ef3aff9da2e05d9d7"
+      sha256 "6e27862e3169d4f70b2500df459c6352d2144432299bcfce2de2ed0eb614694e"
 
       def install
         bin.install "openstatus"
-        man1.install "openstatus-docs.1"
+        man1.install "docs/openstatus-docs.1"
       end
     end
   end
@@ -31,18 +31,18 @@ class Openstatus < Formula
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
       url "https://github.com/openstatusHQ/cli/releases/download/v0.0.4/cli_Linux_x86_64.tar.gz"
-      sha256 "daa768079cdd87670b32c8baa143dd8059f0011442ed63a73941b9ae17bf131b"
+      sha256 "8bfba56676f515a77eec8837119bdc52566bb903f28c0f2bf1c1a6975881f395"
       def install
         bin.install "openstatus"
-        man1.install "openstatus-docs.1"
+        man1.install "docs/openstatus-docs.1"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
       url "https://github.com/openstatusHQ/cli/releases/download/v0.0.4/cli_Linux_arm64.tar.gz"
-      sha256 "1d00348643a6998de4ba5cc0907ca693a81f0c7993133546bade77ad590749bb"
+      sha256 "2386cb560a5483dc5408dc04f95d39a5108522835df3ebe32e593851c37f9fd9"
       def install
         bin.install "openstatus"
-        man1.install "openstatus-docs.1"
+        man1.install "docs/openstatus-docs.1"
       end
     end
   end
