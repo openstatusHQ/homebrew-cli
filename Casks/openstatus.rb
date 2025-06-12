@@ -9,7 +9,7 @@ cask "openstatus" do
   end
 
   binary "openstatus"
-  manpage "docs/openstatus-docs.1"
+  manpage "docs/openstatus.1"
 
   on_macos do
     on_intel do
