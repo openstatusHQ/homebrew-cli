@@ -2,7 +2,7 @@
 cask "openstatus" do
   desc "OpenStatus CLI"
   homepage "https://www.openstatus.dev"
-  version "0.0.7"
+  version "1.0.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -13,23 +13,23 @@ cask "openstatus" do
 
   on_macos do
     on_intel do
-      url "https://github.com/openstatusHQ/cli/releases/download/v0.0.7/cli_Darwin_x86_64.tar.gz"
-      sha256 "31defc71d43e3f7e5094d8b30e0b40143c1a10d1bd4231b06f53599ebb7f7f51"
+      url "https://github.com/openstatusHQ/cli/releases/download/v1.0.0/cli_Darwin_x86_64.tar.gz"
+      sha256 "f8009ebc8568298e72997bb9f912e668c2f9aea1f3c8b907232c023533cab4f9"
     end
     on_arm do
-      url "https://github.com/openstatusHQ/cli/releases/download/v0.0.7/cli_Darwin_arm64.tar.gz"
-      sha256 "22a38ae6b522596f8659aa79a31d297f14ecdb3abbdcee7d5b2a0f0e46babed0"
+      url "https://github.com/openstatusHQ/cli/releases/download/v1.0.0/cli_Darwin_arm64.tar.gz"
+      sha256 "bab2d2a2e27c890b9df4bda9ffd225c13a1613eff0315ac1eec26d84417e5cc1"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/openstatusHQ/cli/releases/download/v0.0.7/cli_Linux_x86_64.tar.gz"
-      sha256 "0cbef303bc585df4360cd22972a0567161a75ee44b4b8420412f04036a277552"
+      url "https://github.com/openstatusHQ/cli/releases/download/v1.0.0/cli_Linux_x86_64.tar.gz"
+      sha256 "479f77ef8e8b943871f8aacb1cf3d8844eef5fd3da42c181b1165419a822fe83"
     end
     on_arm do
-      url "https://github.com/openstatusHQ/cli/releases/download/v0.0.7/cli_Linux_arm64.tar.gz"
-      sha256 "3e76fffcde0c877ae7581e52ec76c2b0864f12fb7b3e67ae784bf85169f6cd5d"
+      url "https://github.com/openstatusHQ/cli/releases/download/v1.0.0/cli_Linux_arm64.tar.gz"
+      sha256 "b081a9589e206888355e8073a98d551159d02b70b2a40e00fbeb6b60a7bd0bd2"
     end
   end
 
