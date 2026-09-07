@@ -34,10 +34,9 @@ cask "openstatus" do
   binary "openstatus"
   manpage "docs/openstatus.1"
 
-  postflight do
-    if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
-      # replace 'foo' with the actual binary name
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/openstatus"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/openstatus"], must_succeed: false
     end
   end
 
